@@ -85,7 +85,7 @@ def main(page):
     q = "泰妍"
     json = get_html(q, page)
     for item in get_images(json):
-        print("正在下载: http://img.hb.aicdn.com/", item["key"], "jpg", sep="")
+        print("正在下载: http://img.hb.aicdn.com/", item["key"], sep="")
         write_into_file(q, item)
 
 
