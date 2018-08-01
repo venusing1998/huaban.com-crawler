@@ -7,7 +7,7 @@ import requests
 
 # 参数
 GROUP_START = 1
-GROUP_END = 8
+GROUP_END = 10
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DIST_DIR = os.path.join(BASE_DIR, "dist")
 
