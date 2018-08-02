@@ -33,8 +33,8 @@ def get_html(q, page):
     try:
         response = requests.get(new_url, headers=headers)
         if response.status_code == 200:
-            html = response.json()
-            return html
+            result = response.json()
+            return result
     except requests.ConnectionError:
         return None
 
