@@ -35,8 +35,8 @@ def get_html(q, page):
         if response.status_code == 200:
             result = response.json()
             return result
-    except requests.ConnectionError:
-        return None
+    except requests.ConnectionError as e:
+        print(e)
 
 
 def get_images(json):
@@ -49,9 +49,9 @@ def get_images(json):
         for item in pins:
             file = item.get("file")
             if file:
-                yield {
-                    "key": file.get("key"),
-                }
+                contents = {}
+                contents["key"] = file.get("key")
+                yield contents
 
 
 def write_into_file(keyword, item):
