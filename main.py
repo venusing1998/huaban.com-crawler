@@ -37,6 +37,7 @@ def get_html(q, page):
             return result
     except requests.ConnectionError as e:
         print(e)
+        return None
 
 
 def get_images(json):

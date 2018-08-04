@@ -32,6 +32,7 @@ def get_html(q, page):
             return result
     except requests.ConnectionError as e:
         print(e)
+        return None
 
 
 def write_into_file(result):
